@@ -171,4 +171,4 @@ POST /api/mappings/
 - Secrets are loaded from environment variables and `.env` is excluded from Git.
 
 ## Author
-<Your Name> - <your email or LinkedIn>
+Surbhideep - surbhideep@gmail.com
