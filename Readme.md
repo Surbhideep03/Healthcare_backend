@@ -35,7 +35,7 @@ healthcare_project/
 
 1. **Clone the repository**
    ```
-   git clone <your-repo-url>
+   git clone https://github.com/Surbhideep03/Healthcare_backend
    cd healthcare-backend
    ```
 
