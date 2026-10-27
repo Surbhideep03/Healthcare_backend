@@ -29,6 +29,7 @@ healthcare_project/
 ├── .env.example
 ├── requirements.txt
 └── manage.py
+├── postman/     # Postman collection for testing all endpoints
 ```
 
 ## Setup
@@ -86,6 +87,9 @@ healthcare_project/
    ```
    python manage.py test
    ```
+8. **Test the APIs in Postman**
+
+   Import `postman/healthcare_api.postman_collection.json` into Postman. Start the server, run **Login** first, and the token is saved automatically.
 
 ## Authentication
 1. Register with `POST /api/auth/register/`.
