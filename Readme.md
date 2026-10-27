@@ -165,6 +165,13 @@ POST /api/mappings/
 | 403 | Authenticated but not allowed (editing another user's doctor) |
 | 404 | Resource not found, or belongs to another user |
 
+## Expected outcomes
+
+- **Register and log in:** users sign up with name, email and password, then log in to receive JWT access and refresh tokens.
+- **Manage records:** authenticated users can create, view, update and delete patients and doctors. Patients are private to the user who created them. Doctors are visible to all users but editable only by their creator.
+- **Assign doctors to patients:** a doctor can be mapped to a patient once (duplicates are rejected), and mappings can be listed, filtered by patient, and removed.
+- **Secure storage in PostgreSQL:** data is stored through the Django ORM. Passwords are hashed (never stored in plain text), endpoints require JWT authentication, ownership checks stop users reading each other's patients, and credentials are loaded from environment variables with `.env` kept out of Git.
+
 ## Design decisions
 - Email is stored as the Django `username`, so no custom user model is needed.
 - Patients are private: users only see and edit patients they created. Other users' patients return 404.
